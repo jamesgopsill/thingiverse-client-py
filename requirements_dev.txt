@@ -1,0 +1,6 @@
+wheel
+flake8
+pdoc
+black
+requests
+typing_extensions
