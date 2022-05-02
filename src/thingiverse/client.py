@@ -6,12 +6,27 @@ from .query_typings import SearchThingsQuery
 
 
 class ThingiverseClient:
+    """
+    The thingiverse client class.
+    """
 
     __url: str = "https://api.thingiverse.com"
+    """
+    Base url to the api endpoint.
+    """
     __debug: bool = False
+    """
+    Whether to log to console or not.
+    """
     app_token: str = ""
+    """
+    The application token to authorise queries. An app can be created using the [Thingiverse developer console](https://www.thingiverse.com/developers).
+    """
 
     def __init__(self, app_token: str = "", debug: bool = False):
+        """
+        Initialise an instance of the client.
+        """
         self.__debug = debug
         self.app_token = app_token
         return
@@ -51,9 +66,15 @@ class ThingiverseClient:
             raise Exception("|- Error with request")
 
     def hello(self) -> str:
+        """
+        Hello world starter function.
+        """
         return "world"
 
     def search_things(
         self, term: str, params: SearchThingsQuery = {}
     ) -> ThingsResponse:
+        """
+        Search for things on Thingiverse.
+        """
         return self.__get("/search/" + term, params)

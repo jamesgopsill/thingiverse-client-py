@@ -2,9 +2,13 @@
 
 A python client that provides access to the Thingiverse API using an apps `app_token`. Great for querying information on Thingiverse.
 
-**Contents**
+## Contents
+
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
+- [Documentation](#documentation)
+- [Formatting](#formatting)
+- [Testing](#testing)
 
 ## Getting started
 
@@ -20,7 +24,6 @@ You can then use it in your python code like so:
 from thingiverse import ThingiverseClient
 
 client = ThingiverseClient(app_token="")
-
 ```
 
 The are more examples in the `examples` folder if you want to learn more about what the tool can do. The docs also provide an overview of all the functions one can call.
@@ -64,7 +67,11 @@ pip install -e .
 Documentation is generated using:
 
 ```
-pdoc ./docs ./src/gtr
+pdoc ./src/thingiverse
+```
+
+```
+pdoc ./src/thingiverse -o ./docs
 ```
 
 - https://pdoc.dev/
